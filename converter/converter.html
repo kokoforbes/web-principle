@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Currency converter with real-time exchange rates">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="./converter.css">
+</head>
+
+<body>
+  <main class="converter-container">
+    <h1>Currency Converter</h1>
+
+    <form id="converterForm" novalidate>
+      <div class="form-group">
+        <label for="sourceCurrency">Source Currency</label>
+        <select id="sourceCurrency" name="sourceCurrency" aria-label="Select source currency" required>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="destCurrency">Destination Currency</label>
+        <select id="destCurrency" name="destCurrency" aria-label="Select destination currency" required>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" value="1" step="0.01" min="0.01" max="1000000"
+          aria-describedby="amountLimit" required>
+        <div class="limit-info" id="amountLimit">Maximum amount: 1,000,000</div>
+      </div>
+    </form>
+
+    <div role="alert" class="error" id="errorMessage"></div>
+
+    <div class="info-box" id="result" aria-live="polite"></div>
+    <div class="info-box" id="rateInfo" aria-live="polite"></div>
+    <div class="info-box" id="timestamp"></div>
+  </main>
+
+  <script type="module" src="./converter.js"></script>
+</body>
+
+</html>
