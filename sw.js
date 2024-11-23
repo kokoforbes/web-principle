@@ -1,15 +1,16 @@
-const CACHE_NAME = "resume-v1";
-const ASSETS = [
+const CACHE_NAME = "web-resume-v1";
+const urlsToCache = [
   "/",
   "/index.html",
   "/styles.css",
-  "/main.js",
-  "/manifest.json",
+  "/index.js",
+  "/personal-logo.svg",
+  // Add other assets to cache
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
   );
 });
 

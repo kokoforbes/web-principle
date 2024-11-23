@@ -4,18 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#4a90e2">
   <title>Abdullahi Onikoko - Web Developer</title>
-  <link rel="stylesheet" href="/main.css">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4285f4">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
 </head>
 
 <body>
+  <header>
+    <a href="/" class="logo" aria-label="Home">
+      <img src="/placeholder.svg?height=40&width=120" alt="Company Logo" width="120" height="40">
+    </a>
 
+    <nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <svg aria-hidden="true" focusable="false" width="24" height="24" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <ul id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="qualifications.html">Qualifications</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <section id="personal-info">
+      <h1>Your Name</h1>
+      <p>Web Developer & Designer</p>
+      <img src="personal-logo.svg" alt="Personal Logo" class="personal-logo">
+    </section>
+
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>Write a brief introduction about yourself here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Name | Email: your.email@example.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const primaryNav = document.getElementById('primary-navigation');
+
+    menuToggle.addEventListener('click', () => {
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+      menuToggle.setAttribute('aria-expanded', !expanded);
+      primaryNav.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
