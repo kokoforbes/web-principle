@@ -4,13 +4,13 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #000000;
 }
 
 header {
-  background-color: #4285f4;
-  color: white;
-  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,9 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
   text-decoration: none;
   ransition: color 0.3s ease;
 }
@@ -49,6 +51,12 @@ nav a:focus {
   padding: 0.5rem;
 }
 
+#primary-navigation a.active {
+  color: #4285f4; /* Highlight color */
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 main {
   padding: 2rem;
   max-width: 1200px;
@@ -59,7 +67,7 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -89,21 +97,26 @@ footer {
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 840px) {
   .menu-toggle {
     display: block;
+  }
+
+  header {
+    padding: 1rem;
   }
 
   nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     right: 0;
     background-color: #f8f9fa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
+    margin-top: 4.75rem;
   }
 
   nav ul.show {

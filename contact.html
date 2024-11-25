@@ -2,36 +2,65 @@
 <html lang="en">
 
 <head>
-  <!-- Same head content as index.html -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullahi Onikoko - Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4285f4">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
 </head>
 
 <body>
   <header>
-    <!-- Same navigation as index.html -->
+    <a href="/" class="logo" aria-label="Home">
+      <img src="/koko.svg" alt="koko" width="120" height="40">
+    </a>
+
+    <nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <svg aria-hidden="true" focusable="false" width="24" height="24" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <ul id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="qualifications.html">Qualifications</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <h1>Contact Me</h1>
-    <form id="contact-form">
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required>
+    <section>
+      <h1>Contact Me</h1>
+      <form id="contact-form">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" maxlength="500" required></textarea>
-      <p id="char-counter">500 characters remaining</p>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" maxlength="500" required></textarea>
+        <p id="char-counter">500 characters remaining</p>
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="not-robot">I'm not a robot:</label>
-      <input type="checkbox" id="not-robot" name="not-robot" required>
+        <label for="not-robot">I'm not a robot:</label>
+        <input type="checkbox" id="not-robot" name="not-robot" required>
 
-      <button type="submit">Send Message</button>
-    </form>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </main>
 
   <footer>
-    <!-- Same footer as index.html -->
+    <p>&copy; 2025 Abdullahi Onikoko | Email: onikokoabdullahi@gmail.com</p>
   </footer>
 
   <script src="index.js"></script>

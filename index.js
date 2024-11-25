@@ -1,3 +1,13 @@
+//toggle menu
+const menuToggle = document.querySelector(".menu-toggle");
+const primaryNav = document.getElementById("primary-navigation");
+
+menuToggle.addEventListener("click", () => {
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+  menuToggle.setAttribute("aria-expanded", !expanded);
+  primaryNav.classList.toggle("show");
+});
+
 // Service Worker Registration
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
