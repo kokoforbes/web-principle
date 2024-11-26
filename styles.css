@@ -1,4 +1,10 @@
 /* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -7,27 +13,42 @@ body {
   color: #000000;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   background-color: #ffffff;
   color: #000000;
-  padding: 1rem 3rem;
+  padding: 1rem;
   display: flex;
+  max-width: 1200px;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+}
+
+.menu-toggle {
+  display: block;
+}
+
+nav ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-top: 4.75rem;
+  list-style-type: none;
 }
 
 .logo {
   display: inline-block;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 1rem;
 }
 
 nav ul li a {
@@ -38,17 +59,8 @@ nav ul li a {
   ransition: color 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
-  color: #007bff;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
+nav ul.show {
+  display: flex;
 }
 
 #primary-navigation a.active {
@@ -57,26 +69,41 @@ nav a:focus {
   text-decoration: underline;
 }
 
+nav a:hover,
+nav a:focus {
+  color: #007bff;
+}
+
 main {
-  padding: 2rem;
+  padding: 1.25rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 6rem auto;
 }
 
 .personal-info {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  min-height: 70vh;
 }
 
-.personal-info > div {
-  flex: 1;
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.social-links a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -87,23 +114,6 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-/* Responsive image */
-.responsive-image {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Custom bullet list */
-.custom-list {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.custom-list li::before {
-  content: "➤ ";
-  color: #4285f4;
 }
 
 /* General styling for form */
@@ -125,65 +135,45 @@ button {
   width: 100%;
 }
 
-button {
-  background-color: #4285f4;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #357ae8;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.social-links a {
-  margin: 0 0.5rem;
-  display: inline-block;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.social-links a:hover {
-  transform: scale(1.1);
-}
-
-/* Responsive styles */
-@media (max-width: 840px) {
-  .menu-toggle {
-    display: block;
+@media (min-width: 839px) {
+  header {
+    padding: 1rem 3rem;
   }
 
-  header {
-    padding: 1rem;
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
   }
 
   nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-top: 4.75rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 0;
+    background-color: #ffffff;
+    box-shadow: none;
   }
 
-  nav ul.show {
-    display: flex;
+  nav ul li {
+    display: inline;
+    margin-right: 1rem;
   }
 
   .personal-info {
-    flex-direction: column-reverse;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -205,21 +195,4 @@ a:focus,
 button:focus {
   outline: 2px solid #007bff;
   outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Responsive design */
-@media screen and (max-width: 600px) {
-  nav ul li {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
 }
