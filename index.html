@@ -29,52 +29,72 @@
       </button>
       <ul id="primary-navigation">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="qualifications.html">Qualifications</a></li>
-        <li><a href="interests.html">Interests</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="skills.html">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="personal-info" class="personal-info">
-      <div>
+  <!-- <div class="social-links">
+    <a href="https://github.com/kokoforbes" target="_blank" aria-label="GitHub">
+      <img src="/images/github-icon.png" alt="GitHub" width="34" height="34">
+    </a>
+    <a href="https://www.linkedin.com/in/kokoforbes/" target="_blank" aria-label="LinkedIn">
+      <img src="/images/linkedin-icon.png" alt="LinkedIn" width="34" height="34">
+    </a>
+  </div> -->
 
-        <picture>
-          <source media="(min-width: 800px)" srcset="/images/abdullahi.webp 360w,
-           /images/abdullahi.webp 720w,
-           /images/abdullahi.webp 1440w" sizes="60">
-          <source srcset="/images/abdullahi.webp 2x,
-           /images/abdullahi.webp 1x">
-          <img src="/images/abdullahi.png" alt="abdullahi onikoko">
-        </picture>
-      </div>
-      <div class="personal-detail">
-        <h2>Hello there: </h2>
-        <h1>I am Abdullahi 👋🏾</h1>
-        <p>I'm a fullstack developer (React.js, Vue.js, Typescript & Node) with a focus on creating exceptional digital
-          experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating
-          web applications for over 5 years, I still love it as if it was something new.
-        </p>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="container">
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="/images/abdullahi.webp" alt="abdullahi onikoko" class="profile-image">
+        <div class="intro">
+          <p class="greeting" aria-hidden="true">HELLO THERE 👋🏾, I AM:</p>
+          <h1 id="hero-title" class="name">Abdullahi</h1>
+          <p class="specialization">Experienced web developer with proficiency in React.js, Vue.js, Typescript & Node.
+            Skilled in writing efficient, testable code using current best practices.</p>
 
-        <div class="social-links">
-          <a href="https://github.com/kokoforbes" target="_blank" aria-label="GitHub">
-            <img src="/images/github-icon.png" alt="GitHub" width="34" height="34">
-          </a>
-          <a href="https://www.linkedin.com/in/kokoforbes/" target="_blank" aria-label="LinkedIn">
-            <img src="/images/linkedin-icon.png" alt="LinkedIn" width="34" height="34">
+          <a href="./contact.html" class="cta-button">
+            Let's Talk
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
           </a>
         </div>
+      </section>
+
+      <div class="detail">
+        <section class="bio" aria-label="Biography">
+          <p>I'm a fullstack developer with a focus on creating exceptional digital
+            experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating
+            web applications for over 5 years, I still love it as if it was something new</p>
+        </section>
+        <section class="stats" aria-label="Experience statistics">
+          <div class="stat">
+            <span class="stat-number" aria-hidden="true">50+</span>
+            <span class="stat-label">
+              <span class="sr-only">Over 50</span>
+              SUCCESSFULLY COMPLETED PROJECTS
+            </span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5</span>
+            <span class="stat-label">YEARS OF EXPERIENCE</span>
+          </div>
+        </section>
       </div>
 
-
-    </section>
-  </main>
+    </main>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Abdullahi Onikoko | Email: onikokoabdullahi@gmail.com</p>
+    <p>&copy; 2025 Abdullahi Onikoko. All rights reserved.</p>
+    <p>onikokoabdullahi@gmail.com</p>
   </footer>
 
   <script src="index.js"></script>
