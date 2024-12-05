@@ -152,8 +152,8 @@ main {
 .project-url {
   color: var(--text-color);
   text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 1rem;
   display: inline-block;
   text-transform: capitalize;
@@ -166,7 +166,27 @@ main {
 
 .project-description {
   color: #666;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.features {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+}
+
+.features strong {
+  color: #444;
+}
+
+/* Focus State */
+.features a:focus {
+  outline: 2px dashed #ffcc00;
+  outline-offset: 2px;
 }
 
 .project-image {
@@ -661,6 +681,10 @@ button {
     padding: 2rem;
   }
 
+  .project-url {
+    font-size: 2.5rem;
+  }
+
   .hero {
     flex-direction: row;
     gap: 4rem;
@@ -710,28 +734,4 @@ a:focus,
 button:focus {
   outline: 2px solid #007bff;
   outline-offset: 2px;
-}
-
-.testimonial {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial blockquote {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.testimonial p {
-  margin: 5px 0;
-}
-
-.author {
-  font-weight: bold;
-  color: #2c3e50;
-  text-align: right;
 }
