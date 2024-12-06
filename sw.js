@@ -2,22 +2,30 @@ const CACHE_NAME = "web-resume-v1";
 const urlsToCache = [
   "/",
   "/index.html",
+  "/experience.html",
+  "/testimonials.html",
+  "/contact.html",
   "/styles.css",
   "/index.js",
-  "/personal-logo.svg",
-  // Add other assets to cache
+  "/images/abdullahi.webp",
 ];
 
-self.addEventListener("install", (event) => {
+self.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log("Opened cache");
+      return cache.addAll(urlsToCache);
+    })
   );
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", function (event) {
   event.respondWith(
-    caches
-      .match(event.request)
-      .then((response) => response || fetch(event.request))
+    caches.match(event.request).then(function (response) {
+      if (response) {
+        return response;
+      }
+      return fetch(event.request);
+    })
   );
 });

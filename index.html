@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4285f4">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="icon-192x192.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 
 <body>
@@ -37,25 +37,23 @@
     </nav>
   </header>
 
-  <!-- <div class="social-links">
-    <a href="https://github.com/kokoforbes" target="_blank" aria-label="GitHub">
-      <img src="/images/github-icon.png" alt="GitHub" width="34" height="34">
-    </a>
-    <a href="https://www.linkedin.com/in/kokoforbes/" target="_blank" aria-label="LinkedIn">
-      <img src="/images/linkedin-icon.png" alt="LinkedIn" width="34" height="34">
-    </a>
-  </div> -->
+
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="container">
     <main id="main-content">
       <section class="hero" aria-labelledby="hero-title">
-        <img src="/images/abdullahi.webp" alt="abdullahi onikoko" class="profile-image">
+        <!-- <img src="/images/abdullahi.webp" alt="abdullahi onikoko" class="profile-image"> -->
+        <picture>
+          <source srcset="/images/abdullahi.webp" media="(orientation: portrait)" />
+          <img src="/images/abdullahi.webp" alt="abdullahi onikoko" class="profile-image" />
+        </picture>
         <div class="intro">
           <p class="greeting" aria-hidden="true">HELLO THERE 👋🏾, I AM:</p>
           <h1 id="hero-title" class="name">Abdullahi</h1>
           <p class="specialization">Experienced web developer with proficiency in React.js, Vue.js, Typescript & Node.
             Skilled in writing efficient, testable code using current best practices.</p>
+
 
           <a href="./contact.html" class="cta-button">
             Let's Talk
@@ -73,6 +71,15 @@
           <p>I'm a fullstack developer with a focus on creating exceptional digital
             experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating
             web applications for over 5 years, I still love it as if it was something new</p>
+
+          <div class="social-links">
+            <a href="https://github.com/kokoforbes" target="_blank" aria-label="GitHub">
+              <img src="/images/github-icon.png" alt="GitHub" width="34" height="34">
+            </a>
+            <a href="https://www.linkedin.com/in/kokoforbes/" target="_blank" aria-label="LinkedIn">
+              <img src="/images/linkedin-icon.png" alt="LinkedIn" width="34" height="34">
+            </a>
+          </div>
         </section>
         <section class="stats" aria-label="Experience statistics">
           <div class="stat">

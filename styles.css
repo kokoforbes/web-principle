@@ -564,6 +564,12 @@ button {
   padding-bottom: 0.5rem;
 }
 
+.experience-section ol {
+  list-style-type: upper-roman;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
 .experience-item {
   background-color: #ffffff;
   border-radius: 8px;
@@ -692,7 +698,7 @@ button {
   }
 
   .profile-image {
-    width: 45%;
+    width: 100%;
   }
 
   .detail {
